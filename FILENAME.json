@@ -1,0 +1,30 @@
+{
+
+  "apps":[
+    {
+  
+  "name":"Intelehealth Image Server",
+  
+  "script":"/usr/bin/parse-server ",
+  
+  "watch":true,"merge_logs":true,"cwd":"/home",
+  "args": ["--appId app2",
+  "--masterKey IH_IMAGE",
+  "--serverURL 'http://{serverIP}:1337/parse'",
+  "--databaseURI 'mongodb://localhost:27017/intelehealth_images'"],
+  
+  "env":{"PORT":1337}
+  },
+  
+  {
+  
+  "name":"Intelehealth Dashboard",
+  
+  "script":"/usr/bin/parse-dashboard ",
+  
+  "watch":true,"merge_logs":true,"cwd":"/home",
+  "args":["--config PARSE_DASHBOARD_CONFIG.json", "--allowInsecureHTTP"]
+  
+  }
+  
+  ]}

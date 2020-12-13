@@ -1,0 +1,17 @@
+{ "apps":[{
+
+"appName":"Image Server",
+
+"serverURL":"{serverIP}:1337/parse",
+
+"appId":"app2","masterKey":"IH_IMAGE"}],
+
+"users":[{
+
+"user":"admin",
+
+"pass":"password"
+
+}]
+
+}
